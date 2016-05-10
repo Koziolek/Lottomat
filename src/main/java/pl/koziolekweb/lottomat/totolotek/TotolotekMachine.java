@@ -3,7 +3,7 @@ package pl.koziolekweb.lottomat.totolotek;
 import com.google.common.base.Preconditions;
 import pl.koziolekweb.fun.Function0;
 import pl.koziolekweb.lottomat.machine.Machine;
-import pl.koziolekweb.lottomat.totolotek.TotolotekMachine.TotolotekResults;
+import pl.koziolekweb.lottomat.totolotek.TotolotekMachine.TotolotekResultOfDraw;
 
 import java.util.Collection;
 import java.util.Set;
@@ -11,11 +11,13 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import static java.lang.String.format;
+
 /**
  * TODO write JAVADOC!!!
  * User: koziolek
  */
-public class TotolotekMachine extends Machine<Ball, TotolotekResults> {
+public class TotolotekMachine extends Machine<Ball, TotolotekResultOfDraw> {
 
 	private static final Balls BALLS = new Balls();
 
@@ -25,8 +27,8 @@ public class TotolotekMachine extends Machine<Ball, TotolotekResults> {
 	}
 
 	@Override
-	protected Function<Collection<Ball>, TotolotekResults> mapToResult() {
-		return TotolotekResults::new;
+	protected Function<Collection<Ball>, TotolotekResultOfDraw> mapToResult() {
+		return TotolotekResultOfDraw::new;
 	}
 
 	@Override
@@ -34,11 +36,11 @@ public class TotolotekMachine extends Machine<Ball, TotolotekResults> {
 		return 6;
 	}
 
-	public static class TotolotekResults extends ResultsOfDraw{
+	public static class TotolotekResultOfDraw extends ResultsOfDraw{
 
-		public TotolotekResults(Collection<Ball> balls) {
+		public TotolotekResultOfDraw(Collection<Ball> balls) {
 			super(balls);
-			Preconditions.checkArgument(balls.size() == 6, "Invalid size of result set!");
+			Preconditions.checkArgument(balls.size() == 6, format("Invalid size of result set! Is %d but should be", balls.size()));
 		}
 	}
 
@@ -52,6 +54,5 @@ public class TotolotekMachine extends Machine<Ball, TotolotekResults> {
 			return BALL_SET;
 		}
 	}
-
 
 }
