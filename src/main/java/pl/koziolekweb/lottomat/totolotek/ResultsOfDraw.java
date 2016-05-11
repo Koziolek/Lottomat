@@ -1,6 +1,7 @@
 package pl.koziolekweb.lottomat.totolotek;
 
 import java.util.Collection;
+import java.util.function.Consumer;
 
 /**
  * TODO write JAVADOC!!!
@@ -14,5 +15,11 @@ public class ResultsOfDraw {
 		this.balls = balls;
 	}
 
+	public class RawResultsOfDrawView{
+
+		public void accept(Consumer<Collection<Ball>> consumer){
+			consumer.accept(balls);
+		}
+	}
 
 }
