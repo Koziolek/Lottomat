@@ -33,6 +33,7 @@ public class BallsTest {
 		assertThat(b1.hashCode()).isEqualTo(b11.hashCode());
 		assertThat(b1.hashCode()).isNotEqualTo(b2.hashCode());
 		assertThat(b1)
+				.isEqualTo(b1)
 				.isEqualTo(b11)
 				.isNotEqualTo(b2)
 				.isNotEqualTo(null)
