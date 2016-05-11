@@ -61,4 +61,4 @@ pitest {
     outputFormats = ['XML', 'HTML']
 }
 
-check.dependsOn jacocoTestReport
+check.dependsOn(jacocoTestReport, "pitest")
