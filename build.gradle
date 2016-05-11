@@ -43,6 +43,13 @@ jacocoTestReport {
     }
 }
 
+test {
+    reports {
+        junitXml.enabled = true
+        html.enabled = true
+    }
+}
+
 buildscript {
     repositories {
         mavenCentral()
