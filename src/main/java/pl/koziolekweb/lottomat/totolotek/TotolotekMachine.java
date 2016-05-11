@@ -7,6 +7,7 @@ import pl.koziolekweb.lottomat.totolotek.TotolotekMachine.TotolotekResultOfDraw;
 
 import java.util.Collection;
 import java.util.Set;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -41,6 +42,13 @@ public class TotolotekMachine extends Machine<Ball, TotolotekResultOfDraw> {
 		public TotolotekResultOfDraw(Collection<Ball> balls) {
 			super(balls);
 			Preconditions.checkArgument(balls.size() == 6, format("Invalid size of result set! Is %d but should be", balls.size()));
+		}
+
+		public class RawTotolotekResultOfDrawView{
+
+			public void accept(Consumer<Collection<Ball>> consumer){
+				TotolotekResultOfDraw.this.new RawResultsOfDrawView().accept(consumer);
+			}
 		}
 	}
 
