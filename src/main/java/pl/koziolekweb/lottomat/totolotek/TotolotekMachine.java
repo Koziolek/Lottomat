@@ -37,16 +37,16 @@ public class TotolotekMachine extends Machine<Ball, TotolotekResultOfDraw> {
 		return 6;
 	}
 
-	public static class TotolotekResultOfDraw extends ResultsOfDraw{
+	public static class TotolotekResultOfDraw extends ResultsOfDraw {
 
 		public TotolotekResultOfDraw(Collection<Ball> balls) {
 			super(balls);
 			Preconditions.checkArgument(balls.size() == 6, format("Invalid size of result set! Is %d but should be", balls.size()));
 		}
 
-		public class RawTotolotekResultOfDrawView{
+		public class RawTotolotekResultOfDrawView {
 
-			public void accept(Consumer<Collection<Ball>> consumer){
+			public void accept(Consumer<Collection<Ball>> consumer) {
 				TotolotekResultOfDraw.this.new RawResultsOfDrawView().accept(consumer);
 			}
 		}

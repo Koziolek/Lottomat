@@ -68,7 +68,7 @@ public class MachineTest {
 		Integer result = sut.pick();
 
 		Assertions.assertThat(result).isIn(1, 2, 3, 4, 5);
-		Assertions.assertThat(input). hasSize(5).containsExactly(1, 2, 3, 4, 5);
+		Assertions.assertThat(input).hasSize(5).containsExactly(1, 2, 3, 4, 5);
 
 	}
 }

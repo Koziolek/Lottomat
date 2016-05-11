@@ -28,10 +28,10 @@ public class Ball {
 		return Objects.hash(value);
 	}
 
-	public class RawBallView{
+	public class RawBallView {
 
-		public void accept(Consumer<Integer> consumer){
-	        consumer.accept(Ball.this.value);
+		public void accept(Consumer<Integer> consumer) {
+			consumer.accept(Ball.this.value);
 		}
 	}
 }

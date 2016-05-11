@@ -15,9 +15,9 @@ public class ResultsOfDraw {
 		this.balls = balls;
 	}
 
-	public class RawResultsOfDrawView{
+	public class RawResultsOfDrawView {
 
-		public void accept(Consumer<Collection<Ball>> consumer){
+		public void accept(Consumer<Collection<Ball>> consumer) {
 			consumer.accept(balls);
 		}
 	}
