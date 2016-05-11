@@ -2,7 +2,6 @@ package pl.koziolekweb.lottomat.totolotek;
 
 import com.google.common.collect.Lists;
 import org.junit.Test;
-import pl.koziolekweb.lottomat.totolotek.ResultsOfDraw.RawResultsOfDrawView;
 import pl.koziolekweb.lottomat.totolotek.TotolotekMachine.TotolotekResultOfDraw;
 import pl.koziolekweb.lottomat.totolotek.TotolotekMachine.TotolotekResultOfDraw.RawTotolotekResultOfDrawView;
 
@@ -11,7 +10,6 @@ import java.util.List;
 import java.util.function.Consumer;
 
 import static org.fest.assertions.Assertions.assertThat;
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.mock;
@@ -39,7 +37,7 @@ public class RawTotolotekResultOfDrawViewTest {
 		Consumer<Collection<Ball>> consumer = mock(Consumer.class);
 		doAnswer(invocation ->
 				assertThat((List<Ball>) invocation.getArguments()[0])
-						.isEqualTo(balls).containsOnly(ball1, ball2,  ball3, ball4, ball5, ball6)
+						.isEqualTo(balls).containsOnly(ball1, ball2, ball3, ball4, ball5, ball6)
 		)
 				.when(consumer).accept(balls);
 
