@@ -31,7 +31,7 @@ public class Ball {
 	public class RawBallView{
 
 		public void accept(Consumer<Integer> consumer){
-
+	        consumer.accept(Ball.this.value);
 		}
 	}
 }
