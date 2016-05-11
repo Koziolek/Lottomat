@@ -1,6 +1,7 @@
 package pl.koziolekweb.lottomat.totolotek;
 
 import java.util.Objects;
+import java.util.function.Consumer;
 
 /**
  * TODO write JAVADOC!!!
@@ -25,5 +26,12 @@ public class Ball {
 	@Override
 	public int hashCode() {
 		return Objects.hash(value);
+	}
+
+	public class RawBallView{
+
+		public void accept(Consumer<Integer> consumer){
+
+		}
 	}
 }
