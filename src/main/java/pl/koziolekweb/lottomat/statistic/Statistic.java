@@ -24,7 +24,11 @@ public class Statistic {
 	}
 
 	public Statistic append(TotolotekResultOfDraw resultOfDraw) {
-		return new Statistic(merge.apply(results, map.apply(resultOfDraw)));
+		return new Statistic(merge.apply(map.apply(resultOfDraw), results));
+	}
+
+	public Statistic append(Statistic other) {
+		return new Statistic(merge.apply(other.results, results));
 	}
 
 	public class RawStatisticView {
