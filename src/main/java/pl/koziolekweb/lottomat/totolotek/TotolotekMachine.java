@@ -37,6 +37,13 @@ public class TotolotekMachine extends Machine<Ball, TotolotekResultOfDraw> {
 		return 6;
 	}
 
+	public class MachineContentView{
+
+		public void accept(Consumer<Collection<Ball>> consumer) {
+			consumer.accept(BALLS.apply());
+		}
+	}
+
 	public static class TotolotekResultOfDraw extends ResultsOfDraw {
 
 		public TotolotekResultOfDraw(Collection<Ball> balls) {
