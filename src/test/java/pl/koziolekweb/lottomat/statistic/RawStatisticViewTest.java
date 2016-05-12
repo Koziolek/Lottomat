@@ -23,7 +23,7 @@ public class RawStatisticViewTest {
 
 	@Test
 	public void shouldAcceptPassStatisticMapToConsumer() throws Exception {
-		Statistic machine = new Statistic(new HashMap<>());
+		Statistic machine = new Statistic.StatisticBuilder().withResults(new HashMap<>()).build();
 
 		RawStatisticView sut = machine.new RawStatisticView();
 
