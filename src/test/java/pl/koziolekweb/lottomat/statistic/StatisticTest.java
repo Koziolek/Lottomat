@@ -31,7 +31,7 @@ public class StatisticTest {
 				);
 		TotolotekResultOfDraw resultOfDraw = new TotolotekResultOfDraw(balls);
 
-		Statistic in = new Statistic.StatisticBuilder().withResults(Maps.newHashMap()).build();
+		Statistic in = Statistic.StatisticBuilder.statistic().withResults(Maps.newHashMap()).build();
 
 		Statistic out = in.append(resultOfDraw);
 

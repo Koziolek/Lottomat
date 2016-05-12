@@ -42,6 +42,9 @@ public class Statistic {
 
 		private Map<Ball, Integer> results;
 
+		private StatisticBuilder() {
+		}
+
 		public StatisticBuilder withResults(Map<Ball, Integer> results) {
 			this.results = results;
 			return this;
