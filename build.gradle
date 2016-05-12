@@ -53,19 +53,30 @@ test {
 buildscript {
     repositories {
         mavenCentral()
-        //Needed only for SNAPSHOT versions
-        //maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
+        jcenter()
     }
     dependencies {
         classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.1.9'
+        classpath 'us.carrclan.david.gradle:gradle-site-plugin:0.2.0'
+
     }
 }
 apply plugin: "info.solidsoft.pitest"
+apply plugin: 'site'
 
 pitest {
     targetClasses = ['pl.koziolekweb.*']
     threads = 4
     outputFormats = ['XML', 'HTML']
 }
+sourceSets {
+    site {
+        resources {
+            srcDir 'build/docs'
+            srcDir 'build/reports'
+        }
+    }
+}
 
 check.dependsOn(jacocoTestReport, "pitest")
+
