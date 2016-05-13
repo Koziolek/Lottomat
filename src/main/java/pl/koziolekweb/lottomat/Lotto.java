@@ -17,7 +17,7 @@ import java.util.stream.IntStream;
 public class Lotto {
 
 
-	public static final int NBR = 100_000_000;
+	public static final int NBR = 100_000;
 
 	public static void main(String[] args) {
 		Lotto lotto = new Lotto();
