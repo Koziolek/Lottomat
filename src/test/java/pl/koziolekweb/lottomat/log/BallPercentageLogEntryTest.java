@@ -15,9 +15,9 @@ public class BallPercentageLogEntryTest {
 	public void shouldCreateProperLogLine() throws Exception {
 		Ball b1 = new Ball(1);
 
-		BallPercentageLogEntry entry = new BallPercentageLogEntry(b1, 1, 1);
+		BallPercentageLogEntry entry = new BallPercentageLogEntry(b1, 1, 2);
 
-		assertThat(entry.logLine()).isEqualTo("1=100,00%");
+		assertThat(entry.logLine()).isEqualTo("1=50,00%");
 
 	}
 
