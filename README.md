@@ -29,7 +29,7 @@ way. [tag v4](https://github.com/Koziolek/Lottomat/releases/tag/v4)
 + [Statystyka Gry](http://koziolekweb.pl/2016/05/13/statystyka-gry/) – Introduction to game statistic [tag v6]
 (https://github.com/Koziolek/Lottomat/releases/tag/v6)
 + [Finalana wersja lottomatu](http://koziolekweb.pl/2016/05/13/finalna-wersja-lottomatu/) – Final version   
-[tag v7](https://github.com/Koziolek/Lottomat/releases/tag/v6)
+[tag v7](https://github.com/Koziolek/Lottomat/releases/tag/v7)
 
 Most of commits contains changes that match to the part of post. Some commits contains "technical stuff" like 
 editions of `README.md` or configuration of travis and gradle. 
