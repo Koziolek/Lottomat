@@ -1,12 +1,10 @@
 package pl.koziolekweb.lottomat;
 
-import org.fest.assertions.Assertions;
 import org.junit.Test;
 
 import java.util.Map;
 
 import static org.fest.assertions.Assertions.assertThat;
-import static org.junit.Assert.*;
 
 /**
  * TODO write JAVADOC!!!
