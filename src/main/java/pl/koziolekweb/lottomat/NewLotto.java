@@ -24,12 +24,11 @@ public class NewLotto {
 		NewLotto newLotto = new NewLotto();
 		Statistic reduce = newLotto.stat(NBR);
 
-		StatisticLogger<String> consumer = new StatisticLogger<String>(
+		reduce.new RawStatisticView().accept(new StatisticLogger<String>(
 				System.out::println,
 				es -> es.sorted(new MapByValueSortComparator<>(Integer::compare))
 						.map(e -> new BallPercentageLogEntry(e.getKey(), e.getValue(), NBR))
-		);
-		reduce.new RawStatisticView().accept(consumer);
+		));
 	}
 
 	private final TotolotekMachine machine;
