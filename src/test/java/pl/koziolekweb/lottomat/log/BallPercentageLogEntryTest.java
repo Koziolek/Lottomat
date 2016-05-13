@@ -17,7 +17,7 @@ public class BallPercentageLogEntryTest {
 
 		BallPercentageLogEntry entry = new BallPercentageLogEntry(b1, 1, 2);
 
-		assertThat(entry.logLine()).isEqualTo("1=50,00%");
+		assertThat(entry.logLine()).isEqualTo("1=50.00%");
 
 	}
 

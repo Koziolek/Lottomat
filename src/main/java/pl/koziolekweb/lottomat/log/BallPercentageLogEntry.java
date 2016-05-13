@@ -2,6 +2,8 @@ package pl.koziolekweb.lottomat.log;
 
 import pl.koziolekweb.lottomat.totolotek.Ball;
 
+import java.util.Locale;
+
 import static java.lang.String.format;
 
 /**
@@ -17,6 +19,7 @@ public class BallPercentageLogEntry implements LogEntry<String> {
 		ball.new RawBallView().accept(sb::append);
 		sb.append("=").append(
 				format(
+						Locale.US,
 						"%.2f",
 						((cardinality * 100.) / all)
 				)
