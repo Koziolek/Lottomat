@@ -67,18 +67,19 @@ public class StatisticTest {
 		Statistic in = Statistic.StatisticBuilder.statistic().withResults(Maps.newHashMap()).build();
 
 		Statistic in2 = Statistic.StatisticBuilder.statistic().withResults(ballsMap).build();
+		Statistic in3 = Statistic.StatisticBuilder.statistic().withResults(ballsMap).build();
 
-		Statistic out = in.append(in2);
+		Statistic out = in.append(in2).append(in3);
 
 		assertThat(out).isNotNull().isNotEqualTo(in);
 		in.new RawStatisticView().accept(map -> assertThat(map).hasSize(0));
 		out.new RawStatisticView().accept(map -> assertThat(map).hasSize(6).includes(
-				entry(ball1, 1),
-				entry(ball2, 1),
-				entry(ball3, 1),
-				entry(ball4, 1),
-				entry(ball5, 1),
-				entry(ball6, 1)
+				entry(ball1, 2),
+				entry(ball2, 2),
+				entry(ball3, 2),
+				entry(ball4, 2),
+				entry(ball5, 2),
+				entry(ball6, 2)
 		));
 	}
 

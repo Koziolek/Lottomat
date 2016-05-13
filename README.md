@@ -26,6 +26,8 @@ List of blog posts that contains steps:
 way. [tag v4](https://github.com/Koziolek/Lottomat/releases/tag/v4)
 + [Krótkie wprowadzenie do testów mutacyjnych](http://koziolekweb.pl/2016/05/12/krotkie-wprowadzenie-do-testow-mutacyjnych/) – how to check out test quality and why high test coverage could be trap [tag v5]
 (https://github.com/Koziolek/Lottomat/releases/tag/v5)
++ [Statystyka Gry](http://koziolekweb.pl/2016/05/13/statystyka-gry/) – Introduction to game statistic [tag v6]
+(https://github.com/Koziolek/Lottomat/releases/tag/v6)
 
 Most of commits contains changes that match to the part of post. Some commits contains "technical stuff" like 
 editions of `README.md` or configuration of travis and gradle. 
